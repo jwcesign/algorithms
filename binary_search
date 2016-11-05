@@ -1,31 +1,46 @@
+//binarySearch(A,s,e,find)
+mid=floor((s+e)/2)
+if find>A[mid]&&s<e
+	s=mid+1
+	binarySearch(A,s,e,find)
+if find<A[mid]&&s<e
+	e=mid
+	binarySearch(A,s,e,find)
+if find==A[mid]
+	print "Find"
+
+
+//cpp code
 #include <iostream>
-#include <string>
-#include <cstring>
-#include <vector>
+
+
 
 using namespace std;
 
-void binarySearch(int a[],int s,int e,int find)
+void binarySearch(int a[], int s, int e, int find)
 {
-	int mid=(s+e)/2;
-	if(find<=a[mid])
+	int mid = (s + e) / 2;
+	if (find>a[mid] && s<e)
 	{
-		e=mid;
-		binarySearch(a,s,mid,find);
+		s = mid+1;
+		binarySearch(a, s, e, find);
 	}
-	else
+	if (find<a[mid] && s<e)
 	{
-		s=mid;
-		binarySearch(a,mid,e,find);
+		e = mid;
+		binarySearch(a, s, e, find);
 	}
-	cout << "ok";
+	if (find == a[mid])
+	{
+		cout << a[mid];
+	}
 
 }
 
 int main()
 {
-	int a[10]={1,2,3,4,5,6,7,8,9,10};
-	binarySearch(a,0,9,8);
-	
+	int a[10] = { 1,2,3,4,5,6,7,8,9,10 };
+	binarySearch(a, 0, 9, 10);
+	cin.get();
 	return 0;
 }
