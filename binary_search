@@ -12,9 +12,6 @@ if find==A[mid]
 
 //cpp code
 #include <iostream>
-
-
-
 using namespace std;
 
 void binarySearch(int a[], int s, int e, int find)
