@@ -5,3 +5,4 @@
 * 学习地址:[GCC](http://www.cnblogs.com/ggjucheng/archive/2011/12/14/2287738.html)
 
 ## 算法分析
+* RAM模型
