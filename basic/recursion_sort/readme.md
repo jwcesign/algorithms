@@ -29,3 +29,16 @@ if p < r
   MERGE-SORT(A,q+1,r)
   MERGE(A,p,q,r)
 ~~~
+
+## 二分法查找
+~~~
+//binary_search(A,num_find,p,r)
+q = (p+r)/2
+if A[q] > num_find
+  q = binary_search(A,1,q-1)
+if A[q] < num_find
+  q = binary_search(A, q,r)
+if A[q] == num_find
+  return q
+return q
+~~~
