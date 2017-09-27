@@ -1,5 +1,5 @@
 # 冒泡排序（伪代码）
-* 低效果
+* 低效率
 * BUBBLESORT(A)
 ~~~
 for i = 1 to A.length-1
